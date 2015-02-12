@@ -81,8 +81,8 @@
 }
 
 .app-question .app-answer:first-child {
-  max-height: 400px;
-  overflow: scroll;
+  /*max-height: 400px;
+  overflow: scroll;*/
 }
 
 .app-answer {
