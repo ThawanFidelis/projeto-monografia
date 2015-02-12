@@ -5,9 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+
 </head>
 <body>
-  <div class="container">
+  <div id="app-main-content" class="container">
     <div class="header">
       <nav>
         <ul class="nav nav-pills pull-right">
@@ -18,8 +27,9 @@
       </nav>
       <h3 class="text-muted">Projeto de Monografia</h3>
     </div>
-
-    <%= yield %>
+    <div class="content" id="commentable-area">
+      <%= yield %>
+    </div>
 
     <footer class="footer">
       <p class="text-center"> Desenvolvido por <a href="https://github.com/ThawanFidelis">Thawan fidelis</a></p>
